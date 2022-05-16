@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: 'labs-test-topics'
+  description: "Test Github topic"
+  annotations:
+    # This must match folder-name/job-name in Jenkins.
+    jenkins.io/job-full-name: cft:HMCTS_labs/labs-test-topics
+    github.com/project-slug: 'hmcts/labs-test-topics'
+  tags:
+    - nodejs
+  links:
+    - url: https://hmcts-reform.slack.com/app_redirect?channel=cloud-native
+      title: cloud-native on Slack
+      icon: chat
+spec:
+  type: service
+  system: labs
+  lifecycle: experimental
+  owner: dcd_group_ado_user_v2
